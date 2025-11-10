@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Profile: Sudeep Chaurasiya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            perspective: 1000px; /* Enables 3D space */
+        }
+        .profile-card {
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transform-style: preserve-3d;
+            animation: rotate 10s infinite linear;
+        }
+        .profile-card:hover {
+            animation-play-state: paused;
+        }
+        @keyframes rotate {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .front {
+            background: #f4f4f4;
+        }
+        .back {
+            background: #e0e0e0;
+            transform: rotateY(180deg);
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 5px solid #667eea;
+        }
+        h1 {
+            margin: 10px 0;
+            color: #333;
+        }
+        p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact a {
+            display: block;
+            margin: 5px 0;
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="front">
+            <img src="https://scontent.flko9-1.fna.fbcdn.net/v/t39.30808-6/534256726_122136477500654468_3197334565117170719_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=rA9qzWroUbgQ7kNvwEAM-ho&_nc_oc=AdmLGgm3flhAMrOuDsQgxgc1sEqFMINO6tQQ6dKuxgKI_DgRLB54ubXl8EPmgwwwMZQoEFziG72AZrhNBDBtAiea&_nc_zt=23&_nc_ht=scontent.flko9-1.fna&_nc_gid=EdY88FIX_yJ2Bj9qEMNFpw&oh=00_AfiMEHqXrwub5sdV0r8wW5SWuWckZr0IuakDZJSoEMC4aQ&oe=691741FF" alt="Profile Photo" class="profile-img">
+            <h1>Sudeep Chaurasiya</h1>
+            <p><strong>Profession:</strong>On probation, learning and growing.</p>
+            <p><strong>Location:</strong> Nautanwa, Maharajganj, UP 273164</p>
+            <p><strong>About Me:</strong>B.Com final-year student aiming for a career in banking and finance.</p>
+        </div>
+        <div class="back">
+            <h1>Contact Details</h1>
+            <div class="contact">
+                <p><strong>Email:</strong> <a href="mailto:sudeepchaurasiya857@gmail.com">sudeepchaurasiya857@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:956996XX29">956996XX29</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sudeep-chaurasiya-574b38251/" target="_blank">[Sudeep's LinkedIn Profile]</a></p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/its_sudeep______?igsh=MTlvZG5naGk1aHNxeQ==" target="_blank">@its_sudeep______</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
